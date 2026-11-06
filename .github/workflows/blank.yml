@@ -21,9 +21,11 @@ jobs:
         uses: actions/checkout@v3
       
       - name: 配置Python环境
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.11.8'
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: 'requirements.txt'
 
       - name: 安装依赖包
         run: |
